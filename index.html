@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dubreuil Portfolio</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="css/interface.css">
+    </head>
+    <body>
+
+        <header class="header">
+            
+            <a href="#home" class="logo">
+                Théophile <span>Dubreuil</span>
+            </a>
+
+            <i class="bx bx-menu" id="menu-icon"></i>
+
+            <nav class="navbar">
+                <a href="#home">Accueil</a>
+                <a href="#about">À-propos</a>
+                <a href="#education">Éducation</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr">Me Contacter <i class="bx bxs-envelope-open"></i></a>
+
+        </header>
+        
+        <div class="welcome">
+            <h2>Bienvenue sur mon site personnel, Il est constamment amélioré et mis à jour !</h2>
+        </div>
+
+        <section class="home" id="home">
+
+            <div class="home-content">
+
+                <h1>
+                    Salut, je suis <span>Théophile</span>
+                </h1>
+
+                <h3 class="text-animation">
+                    <span></span>
+                </h3>
+
+                <p>
+                    Je suis actuellement un étudiant en cycle ingénieur à l'IPSA, une école d'ingénieur spécialisé
+                    dans les systèmes aéronautiques et spatials. Les domaines qui me passionnent sont notamment les systèmes embarquées,
+                    la télécommunication et le développement logiciel appliqué à l'ingénierie. 
+                </p>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/th%C3%A9ophile-dubreuil-53295734a/" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-linkedin-square"></i>
+                        </a>
+
+                        <a href="https://github.com/theoph-dub" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i>
+                        </a>
+
+                    </div>
+
+                <div class="btn-group"> 
+                    <a href="files/DUBREUIL_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn">Mon CV</a>
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+
+            </div>
+
+
+            <div class="home-img">
+                <img src="images/photo_DUBREUIL.jpg" alt="">
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+
+            <div class="about-img">
+                <model-viewer
+                src="models/satria-1_satellite__indonesia_3d_model.glb"
+                shadow-intensity="1"
+                exposure="1.2"
+                camera-controls
+                auto-rotate
+                rotation-per-second="10deg"
+                field-of-view="35deg"
+                camera-orbit="-45deg 75deg 4.5m"
+                interaction-prompt="none"
+                environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_HDR.hdr">
+                </model-viewer>
+            </div>
+
+            <div class="about-content">
+                <h2>À-propos de <span>Moi</span></h2>
+                <p>
+                    Passionné par les technologies modernes, j'explore des projets autour de la programmation
+                    ou de l'électronique embarquée. J'aime transformer les idées en systèmes concrets
+                    et je suis toujours prêt à me mettre en difficulté pour surmonter des défis.
+                </p>
+                <a href="index-read-more.html#home" class="btn">Lire plus</a>
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <h2 class="heading">Éducation</h2>
+
+            <div class="timeline-items">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <a href="https://le-garros.mon-ent-occitanie.fr/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-date">
+                            2023
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Lycée polyvalent le garros</h3>
+                            <p>Obtention du baccalauréat général mention Très bien avec les enseignements 
+                                de spécialité Mathématique, Physique-Chimie et Anglais Monde contemporain.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <a href="https://www.airsupport-mro.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-date">
+                            2025
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Stage - Technicien de maintenance aéronautique (AIR SUPPORT)</h3>
+                            <p>Démontage, nettoyage et remontage de vannes de décharges variables du système VBV 
+                                de moteur CF56. Contrôle qualité, remplissage de procès verbaux.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <a href="https://www.ingc.fr/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-date">
+                                2026
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Stage - Ingénieur génie civil, développement d'outil de dimensionnement (INGC)</h3>
+                            <p>Développement d'un outil de pré-dimensionnement en Python/PySide6 de 
+                                pont/passerelles en treillis Warren intégrant les vérifications selon l'Eurocode.
+                                Notamment le calcul de flèche, des contraintes normales et de l'analyse modale 
+                                afin d'assister les ingénieurs lors du pré-dimensionnement de structure.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <a href="https://www.ipsa.fr/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-date">
+                                2028
+                        </div>
+                        <div class="timeline-content">
+                            <h3>En cours - Diplôme d'ingénieur systèmes aéronautiques et spatials (IPSA)</h3>
+                            <p>Actuellement en 1ère année de cycle ingénieur, majeure systèmes embarquées et 
+                                télécommunications. Promo 2028.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="projects" id="projects">
+
+            <h2 class="heading">Projets</h2>
+
+            <div class="projects-box">
+
+                <div class="project-card">
+                    <img src="images/App_warren.png" alt="">
+
+                    <h3>Treillis Warren</h3>
+
+                    <p>Outil de prédimensionnement de pont/passerelle en Python. Interface graphique
+                        avec PySide6 permettant d'entrer les données puis vérifier la faisabilité
+                        d'après les normes européennes.
+                    </p>
+
+                    <div class="btn"><a href="https://github.com/theoph-dub/Pont-Warren-Predimensionnement-et-Verification/tree/main" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+
+                    <div class="tag" id="internship">Stage</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/semelles.jpg" alt="">
+
+                    <h3>Step-Up</h3>
+
+                    <p>Génération d'énergie électrique depuis une énergie de déformation sur 
+                        une semelle à l'aide de capteur piézoéléctrique en céramique. 
+                        Simulation sur Simulink.                       
+                    </p>
+
+                    <div class="btn"><a href="files/Step-Up.pdf" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+
+                    <div class="tag" id="ipsa">École</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/site.jpg" alt="">
+
+                    <h3>Ce site !</h3>
+
+                    <p>Découverte de l'HTML/JS et de la mise en forme avec CSS. 
+                        Implémentation de boutons, hyperliens, formulaire à remplir, etc.
+                    </p>
+
+                    <div class="btn"><a href="files/Step-Up.pdf" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+
+                    <div class="tag" id="personal">Personnel</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+
+            <h2 class="heading">Contactez <span>Moi</span></h2>
+
+            <form action="https://formsubmit.co/5a04efd3f960b32cc4134507e5b6b5a3" method="POST">
+
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Nom complet" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="phone" placeholder="Numéro de téléphone">
+                        <input type="text" name="subject" placeholder="Sujet du message">
+                    </div>
+                </div>
+
+                <div class="input-group-2">
+
+                    <textarea name="message" id="" placeholder="Votre message" cols="30" rows="10" required></textarea>
+
+                    <input type="submit" value="Envoyer votre message" class="btn">
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/th%C3%A9ophile-dubreuil-53295734a/" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-linkedin-square"></i>
+                </a>
+
+                <a href="https://github.com/theoph-dub" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i>
+                </a>
+            </div>
+
+            <ul class="list">
+                
+                <li>
+                    <a href="#home">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="#about">À-propos</a>
+                </li>
+
+                <li>
+                    <a href="index-read-more.html#about">Lire Plus</a>
+                </li>
+
+                <li>
+                    <a href="#education">Éducation</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projets</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes
+            </p>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    </body>
+</html>
