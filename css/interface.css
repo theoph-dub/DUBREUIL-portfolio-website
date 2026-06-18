@@ -329,7 +329,7 @@ section {
 }
 
 .about-img {
-    width: 88vw;
+    width: 94vw;
     aspect-ratio: 1 / 1;
     position: relative;
     background-size: cover;
@@ -434,8 +434,9 @@ section {
 }
 
 .education {
-    padding: 10rem 10%;
+    padding: 5rem 10%;
     background: var(--first-bg-page);
+    padding-bottom: 15rem;
 }
 .education h2 {
     margin-bottom: 5rem;
@@ -522,14 +523,15 @@ section {
 
 .projects {
     background: var(--second-bg-page);
-    padding: 10rem 12%;
+    padding: 5rem 12%;
+    padding-bottom: 15rem;
 }
 
 .projects-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
     row-gap: 5rem;
 }
 
@@ -542,7 +544,7 @@ section {
     background-color: var(--first-bg-page);
     border: 2px solid var(--accent-purple);
     border-radius: 3rem;
-    gap: 2.6rem;
+    gap: 2.8rem;
     padding: 4rem 2rem;
     padding-bottom: 2rem;
     overflow: hidden;
@@ -770,14 +772,21 @@ section {
     .about {
         flex-direction: column-reverse;
         text-align: center;
+        align-items: center;
         padding: 5rem 7% 2rem;
+        gap: 0;
     }
     .about h2 {
         text-align: center;
         margin: 2rem 0;
     }
-    .about img {
+    .about-img {
         width: 52vw;
+    }
+
+    .skills {
+        align-items: center;
+        justify-content: center;
     }
 
     .education {
