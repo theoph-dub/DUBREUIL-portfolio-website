@@ -1,0 +1,26 @@
+.about {
+    flex-direction: column;
+}
+.about h2#title-post {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-content: center;
+}
+
+.post-card {
+    border: 2px solid var(--accent-purple);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px var(--accent-purple),
+                0 0 10px var(--accent-purple);
+}
+
+.post-card iframe {
+    width: 100%;
+    max-height: 48.2rem;
+}
