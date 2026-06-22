@@ -1,14 +1,91 @@
 .about {
+    min-height: 100vh;
+    padding: 10rem 12%;
     flex-direction: column;
 }
-.about h2#title-post {
-    padding-top: 6rem;
+
+.about h2 {
+    font-size: 6rem;
+    padding-bottom: 5rem;
+}
+
+.about p {
+    font-size: 2rem;
+}
+
+.more-content h3 {
+    font-size: 4rem;
+    text-indent: 0.5rem;
+}
+
+.more-content p {
+    font-size: 2rem;
+    text-indent: 8rem;
+}
+
+.more-content i {
+    background: linear-gradient(
+    270deg,
+    var(--accent-pink) 10%,
+    var(--accent-purple) 100%
+    ) ;
+    background-clip: text;
+    color: transparent;
+}
+
+.more-row {
+    padding-bottom: 6rem;
+}
+.more-row:nth-last-child(1) {
+    padding-bottom: 0rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
     padding-bottom: 4rem;
 }
+
+.toeic {
+    border: 2px solid var(--accent-purple);
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--first-bg-page);
+    padding-bottom: 3rem;
+    box-shadow: 0 0 5px var(--accent-purple);
+    transition: 0.4s ease;
+    max-width: 300px;
+}
+
+.toeic:hover {
+    transform: scale(1.02)translateY(-5px);
+    box-shadow: 0 0 5px var(--accent-purple),
+                0 0 10px var(--accent-purple);
+}
+
+.toeic img {
+    border-bottom: 2px solid var(--accent-purple);
+    padding: 3rem 4rem;
+    border-radius: 1rem;
+    max-width: 290px;
+}
+
+.toeic p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .posts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    gap: 5rem;
     justify-content: center;
 }
 
@@ -18,9 +95,50 @@
     overflow: hidden;
     box-shadow: 0 0 5px var(--accent-purple),
                 0 0 10px var(--accent-purple);
+    transition: 0.4s ease-in-out;
+}
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px var(--accent-purple),
+                0 0 10px var(--accent-purple),
+                0 0 20px var(--accent-purple); 
 }
 
 .post-card iframe {
     width: 100%;
-    max-height: 48.2rem;
+    max-height: 60rem;
+}
+
+.posts-section {
+    min-height: 100vh;
+    padding: 10rem 12%;
+}
+.posts-section h2 {
+    font-size: 5rem;
+    padding-bottom: 8rem;
+}
+
+
+
+@media(max-width:1350px) {
+.posts {
+    gap: 2rem;
+}
+
+}
+
+@media(max-width:1080px) {
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.posts-section h2 {
+    text-align: center;
+}
+.post-card iframe {
+    max-height: 80rem;
+}
 }

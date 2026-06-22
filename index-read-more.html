@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
         <link rel="manifest" href="images/icons/site.webmanifest">
 
-        <title>Dubreuil Portfolio Plus</title>
+        <title>Dubreuil Portfolio - Plus</title>
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="css/interface.css">
         <link rel="stylesheet" href="css/interface-read-more.css">
@@ -27,7 +27,7 @@
             <nav class="navbar">
                 <a href="index.html#home">Accueil</a>
                 <a href="#about">Lire Plus</a>
-                <a href="index.html#education">Éducation</a>
+                <a href="index.html#education">Expériences</a>
                 <a href="index.html#projects">Projets</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
@@ -40,33 +40,95 @@
             <div class="about-content">
                 <h2>Plus à propos de <span>Moi</span></h2>
 
-                <p>
-                    Grâce a ma formation et à mes stages, j'apprends de nombreux langages de 
-                    programmation (Python, matlab/simulink, VHDL, C/C++, SQL, etc) et je découvre de nombreuses
-                    librairies (PySide6, etc). J'ai 
-                    également pu faire du prototypage sur Arduino... 
-                </p>
+                <div class="more-content">
+                    <div class="more-row">
+                        <h3><i class="bx bx-chevron-right"></i>Parcours</h3>
 
-                <h2 id="title-post">Quelques posts <span>intéressants</span></h2>
-
-                <div class="posts">
-                    <div class="post-card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407734730894495744?collapsed=1" height="669" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                        <p>Lors de ma formation à l'IPSA, j'ai eu l'occasion de faire des
+                            projets nécessitant de prototyper ou même des projets de 
+                            bureau d'études où notre capacité de réflexion est mise à l'épreuve.
+                            Ces bureaux d'études traitent notamment d'électrotechnique soit de contrôle d'un 
+                            moteur brushless par Arduino ou de création d'un robot suiveur de ligne. Un projet 
+                            d'automatique consistant à la création d'un drone sur Matlab en faisant son asservissement. 
+                            Mais aussi la création d'un radar bidimensionnel toujours en matlab avec traitement du bruit.
+                            Des projets également de sciences des données comme l'études d'algorithmes de prédiction de classe avec KNN, 
+                            Théorème de Bayes... Ou encore de carte FPGA programmable avec vivado afin de 
+                            créer un compteur sur afficheur 7 segments. Outre les projets techniques,
+                            nous avons également des études de RSE
+                        </p>
                     </div>
 
-                    <div class="post-card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7470419769960263681?collapsed=1" height="551" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                    <div class="more-row">
+                        <h3><i class="bx bx-chevron-right"></i>Compétences Techniques</h3>
+
+                        <p>Dans ma formation, j'ai pu utiliser principalement python ainsi que ses
+                            librairies uties comme numpy, pandas, scikit, matplotlib ou encore PySide6.
+                            J'ai également une capacité intermédiaire en C/C++ ainsi qu'en matlab et simulink.
+                            Pour les systèmes embarquées, j'ai pu utiliser arduino et vivado pour des 
+                            cartes de FPGA. J'ai également utilisé CATIA pour certains projets de modélisations.
+                        </p>
                     </div>
 
-                    <div class="post-card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7458074260931108866?collapsed=1" height="601" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                    <div class="more-row">
+                        <h3><i class="bx bx-chevron-right"></i>Centres d'intérêts</h3>
+
+                        <p>Les sports qui me passionnent sont le ski et l'escalade. J'aime particulièrement le ski dans les 
+                            pyrénées et j'ai déjà gagné des compétitions de courses (Slalom) en club. 
+                            Je pratique l'escalade en salle sur Toulouse à un niveau débutant. 
+                            Véritable passionné de jeux-vidéos allant du simulateur a l'arcade, j'essaie
+                            tous type de jeu qui me permettent de renforcer ma logique notamment grâce
+                            à des simulateurs comme Kerbal Space Program. J'admire également la différence
+                            de culture avec les pays asiatiques comme la Chine, Taiwan et le japon. 
+                            C'est pourquoi j'adore voyager pour découvrir la façon dont les sociétés 
+                            fonctionnent dans le monde.
+                        </p>
+                    </div>
+
+                    <div class="more-row">
+                        <h3><i class="bx bx-chevron-right"></i>Soft-Skills</h3>
+
+                        <p>Je suis quelqu'un de rigoureux qui étudie l'ensemble des options
+                            a ma disposition avant de prendre une décision. Je m'adapte selon la charge de 
+                            travail sans problème. J'ai de l'expérince en travail d'équipes et gestion grâce a ma formation
+                            (planning de GANTT, PERT...). J'ai également pu développer mes concepts de Soft skills
+                            grâce à mes cours développant les types de managment et de profil au sein d'une équipe.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            
+            <div class="cards">
+                <a href="files/DUBREUIL_TOEIC_C1.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="toeic">
+                    <img src="images/TOEIC_logo.jpg" alt="TOEIC_logo">
+
+                    <p>Score <em>TOEIC®</em> 975/990 <br> <i class="bx bxs-right-arrow-alt"></i> équivalent <span>C1</span></p>
+                </div>
+                </a>
+
+                
+            </div>
         </section>
 
+        <section class="posts-section" id="posts-section">
+
+            <h2 id="title-post">Quelques posts <span>intéressants</span></h2>
+
+                <div class="posts">
+                    <div class="post-card">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407734730894495744" height="860" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                    </div>
+
+                    <div class="post-card">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7470419769960263681" height="720" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                    </div>
+
+                    <div class="post-card">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7458074260931108866" height="769" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                    </div>
+                </div>
+
+        </section>
 
         <footer class="footer">
 
@@ -94,7 +156,7 @@
                 </li>
 
                 <li>
-                    <a href="index.html#education">Éducation</a>
+                    <a href="index.html#education">Expériences</a>
                 </li>
 
                 <li>
@@ -110,6 +172,7 @@
                 © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes
             </p>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
-    <script src="js/script.js"></script>
 </html>
