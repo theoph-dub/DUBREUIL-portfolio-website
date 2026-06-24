@@ -735,7 +735,7 @@ section {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 25%;
+        width: 35%;
         padding: 1rem 3rem;
         background: rgba(45, 31, 94, 0.8);
         border-bottom-left-radius: 2rem;
@@ -753,6 +753,17 @@ section {
     .navbar.active {
         display: block;
     }
+
+    .welcome {
+        padding: 2rem 2rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .header {
+        padding: 3rem 3rem;
+    }
+
     .gradient-btn {
         display: none;
     }
@@ -760,19 +771,17 @@ section {
     .home {
         flex-direction: column-reverse;
         margin: 5rem 7%;
-        gap: 5rem;
     }
     .home-content {
         align-items: center;
         text-align: center;
+        gap: 2rem;
+    }
+    .home-content h3 {
+        font-size: 3rem;
     }
     .home-img img {
-        width: 52vw;
-    }
-
-    .about-img {
-    width: 52vw;
-    margin-bottom: 10rem;
+        width: 70vw;
     }
 
     .about {
@@ -787,7 +796,8 @@ section {
         margin: 2rem 0;
     }
     .about-img {
-        width: 52vw;
+        width: 70vw;
+        margin-bottom: 8rem;
     }
 
     .skills {
@@ -817,12 +827,35 @@ section {
     }
 
     .projects {
-        padding: 5rem 2%;
+        padding: 5rem 7%;
     }
 
     .projects h2 {
         margin: 3rem 0;
     }
+
+    .contact {
+        padding: 5rem 7%;
+    }
+
+    .contact form {
+        flex-direction: column;
+    }
+
+    .contact form textarea {
+        margin-bottom: 3rem;
+    }
+    .contact form input.btn {
+        margin-bottom: 1rem;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 2rem;
+    }
+
 }
 
 

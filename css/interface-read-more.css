@@ -121,24 +121,44 @@
 
 
 @media(max-width:1350px) {
-.posts {
-    gap: 2rem;
-}
+    .posts {
+        gap: 2rem;
+    }
 
 }
 
 @media(max-width:1080px) {
-.posts {
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-.posts-section h2 {
-    text-align: center;
-}
-.post-card iframe {
-    max-height: 80rem;
-}
+
+    .more-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .more-content h3 {
+        font-size: 4rem;
+        text-indent: 0;
+    }
+
+    .more-content p {
+        font-size: 2rem;
+        text-indent: 0;
+    }
+
+    .cards {
+        padding-top: 3rem;
+    }
+
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .posts-section h2 {
+        text-align: center;
+    }
+    .post-card iframe {
+        max-height: 80rem;
+    }
 }
