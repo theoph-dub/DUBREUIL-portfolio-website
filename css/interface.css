@@ -140,6 +140,7 @@ section {
     padding: 1rem;
     border-radius: 4rem;
     background-color: var(--second-bg-page);
+    box-shadow: 0 0 5px var(--accent-purple);
 }
 .welcome h2 {
     font-size: 2rem;
@@ -389,6 +390,7 @@ section {
     background-color: var(--first-bg-page);
     min-width: 10rem;
     max-height: 14rem;
+    box-shadow: 0 0 5px var(--accent-purple);
 }
 .skill-pannel i {
     font-size: 4rem;
@@ -557,9 +559,9 @@ section {
     width: 350px;
 }
 .project-card:hover {
-    box-shadow: 0 0 25px var(--accent-purple),
-                0 0 50px var(--accent-purple);
-    transform: scale(1.02) translateY(-10px);
+    box-shadow: 0 0 15px var(--accent-purple),
+                0 0 30px var(--accent-purple);
+    transform: scale(1.02) translateY(-8px);
     
 }
 .project-card img {
