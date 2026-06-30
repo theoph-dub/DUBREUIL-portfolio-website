@@ -13,6 +13,10 @@
     font-size: 2rem;
 }
 
+.more-content {
+    text-align: justify;
+}
+
 .more-content h3 {
     font-size: 4rem;
     text-indent: 0.5rem;
@@ -131,7 +135,6 @@
 
     .more-content {
         justify-content: center;
-        text-align: center;
     }
 
     .more-content h3 {

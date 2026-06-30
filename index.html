@@ -11,6 +11,7 @@
         <link rel="manifest" href="images/icons/site.webmanifest">
 
         <title>Dubreuil Portfolio</title>
+
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
         <link rel="stylesheet" href="css/interface.css">
@@ -36,10 +37,6 @@
             <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr">Me Contacter <i class="bx bxs-envelope-open"></i></a>
 
         </header>
-        
-        <div class="welcome">
-            <h2>Bienvenue sur mon site personnel, Il est constamment amélioré et mis à jour !</h2>
-        </div>
 
         <section class="home" id="home">
 
@@ -49,9 +46,9 @@
                     Bonjour, je suis <span>Théophile</span>
                 </h1>
 
-                <h3 class="text-animation">
-                    <i class="bx bx-chevron-right"></i><span></span>
-                </h3>
+                <div class="text-animation">
+                    <i class="bx bx-chevron-right"></i><span class="typing"></span>
+                </div>
 
                 <p>
                     Je suis actuellement un étudiant en cycle ingénieur à l'IPSA, une école d'ingénieur spécialisé
@@ -89,7 +86,6 @@
             <div class="about-img">
                 <model-viewer
                 src="models/satria-1_satellite__indonesia_3d_model.glb"
-                loading="eager"
                 shadow-intensity="1"
                 exposure="1.2"
                 camera-controls
@@ -330,7 +326,7 @@
             </p>
         </footer>
 
-        <script src="js/script.js"></script>
+        <script type="module" src="js/script.js"></script>
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     </body>
 </html>
