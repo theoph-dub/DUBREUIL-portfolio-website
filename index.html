@@ -38,6 +38,8 @@
 
         </header>
 
+        <div class="ship-canvas-education">
+        <div class="ship-canvas">
         <section class="home" id="home">
 
             <div class="home-content">
@@ -84,17 +86,7 @@
         <section class="about" id="about">
 
             <div class="about-img">
-                <model-viewer
-                src="models/satria-1_satellite__indonesia_3d_model.glb"
-                shadow-intensity="1"
-                exposure="1.2"
-                camera-controls
-                auto-rotate
-                rotation-per-second="10deg"
-                camera-orbit="-45deg 75deg 4m"
-                interaction-prompt="none"
-                environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_HDR.hdr">
-                </model-viewer>
+                <img src="images/Konnect.jpg" alt="">
             </div>
 
             <div class="about-content">
@@ -135,6 +127,7 @@
                 </div>
             </div>
         </section>
+        </div>
 
         <section class="education" id="education">
             <h2 class="heading">Éducation & Expérience</h2>
@@ -201,6 +194,7 @@
 
             </div>
         </section>
+        </div>
         
         <section class="projects" id="projects">
 
@@ -325,8 +319,14 @@
                 © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes
             </p>
         </footer>
+        
+        <div id="loader">
+            <div class="loader-spinner"></div>
+            <h2>Loading website<span class="typing-dots"></span></h2>
+        </div>
+
 
         <script type="module" src="src/js/script.js"></script>
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     </body>
+
 </html>

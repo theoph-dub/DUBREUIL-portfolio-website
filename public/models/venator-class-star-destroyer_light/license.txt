@@ -1,0 +1,11 @@
+Model Information:
+* title:	venator-class-star-destroyer
+* source:	https://sketchfab.com/3d-models/venator-class-star-destroyer-956980e81b1f4750951d0acbe5fbe063
+* author:	pariseev2015 (https://sketchfab.com/pariseev2015)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "venator-class-star-destroyer" (https://sketchfab.com/3d-models/venator-class-star-destroyer-956980e81b1f4750951d0acbe5fbe063) by pariseev2015 (https://sketchfab.com/pariseev2015) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
