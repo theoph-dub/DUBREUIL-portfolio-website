@@ -127,7 +127,7 @@ scene.add(spotLight);
 
 // Modèle 
 let meshVenator;
-const loaderVenator = new GLTFLoader().setPath('/models/venator-class-star-destroyer_light/');
+const loaderVenator = new GLTFLoader().setPath(import.meta.env.BASE_URL + 'models/venator-class-star-destroyer_light/');
 loaderVenator.load('scene.gltf', 
     function(gltf) {
         meshVenator = gltf.scene;
