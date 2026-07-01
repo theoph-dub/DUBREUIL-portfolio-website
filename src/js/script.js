@@ -47,7 +47,6 @@ function typeEffect(words) {
 import * as THREE from 'three';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { pickBuildingColor } from 'three/examples/jsm/generators/city/SkyscraperGenerator.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
@@ -165,7 +164,7 @@ window.addEventListener('scroll', () => {
 const startPosition = {x: -2, y: -1.6, z: -1};
 const startRotation = {x: Math.PI/12, y: -Math.PI/5, z: -Math.PI/45};
 
-const secondStartPosition = {x: 0, y: -12, z: 0};
+const secondStartPosition = {x: 0, y: -14, z: 0};
 const secondStartRotation = {x: 0, y: Math.PI/2, z: Math.PI/2};
 
 
@@ -177,6 +176,8 @@ const educationTop = education.offsetTop;
 // Animation
 const shipCanvas = document.getElementById('canvas-ship');
 let endPosition = null;
+let endRotation = null;
+let wasBottom = false;
 
 function animate() {
     requestAnimationFrame(animate);
@@ -194,22 +195,33 @@ function animate() {
         meshVenator.rotation.z = startRotation.z + scrollPosY * 0;
 
         endPosition = {x: meshVenator.position.x, y: meshVenator.position.y, z: meshVenator.position.z};
+        endRotation = {x: meshVenator.rotation.x, y: meshVenator.rotation.y, z: meshVenator.rotation.z};
     }
     if (scrollY>aboutMid) {
 
-        const delta = scrollY - aboutMid;
+        if (wasBottom) {
 
-        meshVenator.position.y = endPosition.y -  delta * - 0.0111;  
-        meshVenator.position.x = endPosition.x - delta * -0.05
+            meshVenator.rotation.x = endRotation.x;
+            meshVenator.rotation.y = endRotation.y; 
+            meshVenator.rotation.z = endRotation.z;
+
+            wasBottom = false;
+        } else {
+            const delta = scrollY - aboutMid;
+
+            meshVenator.position.y = endPosition.y -  delta * - 0.0111;  
+            meshVenator.position.x = endPosition.x - delta * -0.05
+        }
         
     }
 
     if (scrollY>educationTop) {
-
+        
+        wasBottom = true;
         const delta = scrollY - educationTop;
 
         meshVenator.position.x = secondStartPosition.x;
-        meshVenator.position.y = secondStartPosition.y - delta*-0.02; 
+        meshVenator.position.y = secondStartPosition.y - delta*-0.03; 
         meshVenator.position.z = secondStartPosition.z;  
 
         meshVenator.rotation.x = secondStartRotation.x;
