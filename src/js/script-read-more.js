@@ -61,15 +61,13 @@ sceneStars.add(stars);
 
 let scrollPosY = 0;
 
-window.addEventListener('scroll', () => {
-    scrollPosY = (window.scrollY/document.body.clientHeight);
-});
-
-
 // Animation
 
 function animate() {
     requestAnimationFrame(animate);
+
+    scrollPosY = (window.scrollY/document.body.clientHeight);
+    
     stars.position.y = scrollPosY * 5;
     rendererStars.render(sceneStars, cameraStars);
 };
@@ -84,6 +82,6 @@ window.addEventListener("resize", () => {
     cameraStars.aspect = window.innerWidth / window.innerHeight;
     cameraStars.updateProjectionMatrix();
 
-    rendererStars.setSize(window.innerWidth, window.innerHeight);
+    rendererStars.setSize(window.innerWidth, window.innerHeight, false);
 
 });

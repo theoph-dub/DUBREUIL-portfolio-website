@@ -156,11 +156,6 @@ let scrollY = 0;
 const about = document.getElementById("about");
 const aboutMid = document.querySelector('.ship-canvas').getBoundingClientRect().bottom - (document.querySelector('.ship-canvas').getBoundingClientRect().bottom-document.querySelector('.ship-canvas').getBoundingClientRect().top)/2;
 
-window.addEventListener('scroll', () => {
-    scrollY = window.scrollY;
-    scrollPosY = (window.scrollY/document.body.clientHeight);
-});
-
 const startPosition = {x: -2, y: -1.6, z: -1};
 const startRotation = {x: Math.PI/12, y: -Math.PI/5, z: -Math.PI/45};
 
@@ -181,6 +176,9 @@ let wasBottom = false;
 
 function animate() {
     requestAnimationFrame(animate);
+
+    scrollY = window.scrollY;
+    scrollPosY = (window.scrollY/document.body.clientHeight);
 
     if (meshVenator && scrollY<=aboutMid) {
         shipCanvas.style.position = 'fixed';
@@ -245,12 +243,12 @@ window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
 
     cameraStars.aspect = window.innerWidth / window.innerHeight;
     cameraStars.updateProjectionMatrix();
 
-    rendererStars.setSize(window.innerWidth, window.innerHeight);
+    rendererStars.setSize(window.innerWidth, window.innerHeight, false);
 
 });
 
