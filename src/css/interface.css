@@ -75,7 +75,6 @@ html {
 
 body {
     background-color: var(--plain-first-bg-page);
-    background: transparent;
     color: var(--text-color);
 }
 
@@ -181,6 +180,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 10rem;
+    background: var(--first-bg-page);
 }
 
 .home-content {
@@ -284,6 +284,7 @@ section {
     gap: 10rem;
     padding: 10rem 12%;
     background-color: transparent;
+    background: var(--second-bg-page);
 }
 
 .about-img {

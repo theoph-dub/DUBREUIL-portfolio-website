@@ -11,6 +11,7 @@
     min-height: 100vh;
     padding: 10rem 12%;
     flex-direction: column;
+    background: var(--first-bg-page);
 }
 
 .about h2 {
@@ -100,6 +101,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     justify-content: center;
+    background: var(--second-bg-page);
 }
 
 .post-card {
