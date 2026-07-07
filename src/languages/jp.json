@@ -1,0 +1,82 @@
+{
+    "home-header": "ホーム",
+    "about-header": "自己紹介",
+    "about-more-header": "もっと見る",
+    "experiences-header": "経験",
+    "projects-header": "プロジェクト",
+    "contact-header": "お問い合わせ",
+    "contact-me-header": "お問い合わせ <i class='bx bxs-envelope-open'></i>",
+
+    "more-about-title": "<span>私</span>についてもっと知る",
+
+    "parcours-title": "<i class='bx bx-chevron-right'></i>学歴・経歴",
+    "parcours-body": "IPSAでの学業において、問題解決能力を試される設計プロジェクトに取り組む機会がありました。これらのプロジェクトには、特に電気工学(Arduinoによるブラシレスモーターの制御やライントレースロボットの製作)が含まれます。自動制御プロジェクトでは、MATLABを用いたドローンの設計(LQR制御設計)を行いました。また、MATLABで二次元レーダーシステム(ノイズ処理を含む)も開発しました。さらに、データサイエンスのプロジェクトにも取り組み、クラス予測アルゴリズム(KNNやベイズの定理などを使用)の研究を行いました。Vivadoを使用したプログラマブルFPGAボードにも取り組み、7セグメントディスプレイ上にカウンターを作成しました。また、CSR(ネスレに関する研究)や未来予測・先見的思考の取り組み(フランス軍の「レッドチーム防衛」に関する研究)にも携わりました。",
+
+    "technical-skills-title": "<i class='bx bx-chevron-right'></i>技術スキル",
+    "technical-skills-body": "学業では、主にPythonとその有用なライブラリ(NumPy、Pandas、Scikit、Matplotlib、PySide6など)を使用しました。また、C/C++、MATLAB、Simulinkについても中級レベルの習熟度があります。組み込みシステムについては、ArduinoやFPGAボード用のVivadoを使用してきました。一部のモデリングプロジェクトではCATIAも使用しました。",
+
+    "interests-title": "<i class='bx bx-chevron-right'></i>興味・関心",
+    "interests-body": "情熱を注いでいるスポーツはスキーとロッククライミングです。特にピレネー山脈でのスキーが好きで、クラブレベルのスラロームレースで優勝したこともあります。トゥールーズの室内ジムで初心者レベルのクライミングをしています。シミュレーターからアーケードゲームまで、真のビデオゲーム愛好家として、論理的思考を鍛えるあらゆる種類のゲーム、特にKerbal Space Programのようなシミュレーターを試しています。また、台湾や日本などアジア諸国の文化的な違いにも魅了されています。だからこそ、世界中の社会がどのように機能しているかを発見するために旅行するのが大好きです。",
+
+    "soft-skills-title": "<i class='bx bx-chevron-right'></i>ソフトスキル",
+    "soft-skills-body": "私は決断を下す前に、利用可能なすべての選択肢を慎重に検討する几帳面な性格です。仕事量の変化にも柔軟に対応できます。研修(ガントチャート、PERTなど)を通じて、チームワークとマネジメントの経験を積んできました。また、さまざまなマネジメントスタイルやチームダイナミクスを学ぶ講座を通じて、ソフトスキルも磨いてきました。",
+
+    "TOEIC-score": "<em>TOEIC®</em> スコア 975/990 <br> <i class='bx bxs-right-arrow-alt'></i> <span>C1</span> 相当",
+
+    "posts-title": "興味深い<span>投稿</span>",
+
+
+
+    "home-title": "こんにちは、<span>テオフィル</span>です",
+    "home-text-body": "現在、航空宇宙システムを専門とするエンジニアリングスクールIPSAでエンジニアリングを学んでいます。関心のある分野は、組み込みシステム、テレコミュニケーション、そして工学に応用されたソフトウェア開発です。",
+    "contact-btn": "お問い合わせ",
+    "CV-btn": "履歴書",
+
+    "about-title": "<span>私</span>について",
+    "about-body": "最新のテクノロジーに情熱を持ち、プログラミングや組み込み電子工学に関連するプロジェクトに取り組んでいます。アイデアを具体的なシステムに変えることが好きで、常に自分自身を高め、課題を乗り越える準備ができています。",
+
+
+
+    "education-title": "学歴・経験",
+
+    "IPSA-title": "在学中 - 航空宇宙システム工学 学位(IPSA)",
+    "IPSA-body": "現在、エンジニアリング課程の1年目で、組み込みシステムとテレコミュニケーションを専攻しています。2028年卒業予定。ピアチュータリングプログラムのメンバー兼メンターを務めています。",
+
+    "INGC-title": "インターンシップ - 土木エンジニア、設計ツール開発(INGC)",
+    "INGC-body": "ワーレントラス橋・歩道橋の予備設計のためのPython/PySide6ツールの開発。ユーロコードに準拠したチェック機能を組み込み、たわみ、垂直応力、モード解析の計算を行い、構造物の予備設計においてエンジニアを支援します。",
+
+    "airsupport-mro-title": "インターンシップ - 航空機整備士(AIR SUPPORT)",
+    "airsupport-mro-body": "CFM56エンジンのVBVシステムにおける可変ブリードバルブの分解、洗浄、再組立。品質管理および検査報告書の作成。",
+
+    "bac-title": "ル・ガロス総合高等学校",
+    "bac-body": "数学、物理・化学、および英語(現代世界情勢)を専攻し、最優秀の成績で普通科高校卒業資格(バカロレア)を取得。",
+
+    "projects-title": "プロジェクト",
+
+    "warren-truss-project-title": "ワーレントラス",
+    "warren-truss-project-body": "Pythonベースの橋・歩道橋予備設計ツール。PySide6で構築されたグラフィカルユーザーインターフェースにより、データを入力し、欧州基準に基づいた実現可能性を検証できます。",
+
+    "step-up-project-title": "ステップアップ",
+    "step-up-project-body": "セラミック圧電センサーを使用し、靴の中敷きの変形エネルギーから電気エネルギーを生成。Simulinkでシミュレーションを実施。",
+
+    "this-site-project-title": "このウェブサイト!",
+    "this-site-project-body": "HTML/JSおよびCSSを用いたスタイリング技術の入門。インタラクティブなボタン、ハイパーリンク、入力フォームなどの実装。",
+
+    "tag-internship": "インターンシップ",
+    "tag-school": "学校 (IPSA)",
+    "tag-personal": "個人",
+
+    "project-btn": "プロジェクトを見る",
+
+    "contact-me-title": "<span>私</span>へのお問い合わせ",
+
+    "form-name": "氏名",
+    "form-email": "メールアドレス",
+    "form-phone": "電話番号",
+    "form-subject": "件名",
+    "form-message": "メッセージ",
+    "form-button": "メッセージを送信",
+
+    "loading-text": "サイトを読み込み中",
+    "traduction-warning": "<i class='bx bx-error-circle'></i> 注意:翻訳には誤りが含まれる場合があります(ご連絡ください)"
+}

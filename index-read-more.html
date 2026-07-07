@@ -1,20 +1,31 @@
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-        <link rel="manifest" href="images/icons/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+        <link rel="manifest" href="icons/site.webmanifest">
 
         <title>Dubreuil Portfolio - Plus</title>
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="src/css/interface.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
         <link rel="stylesheet" href="src/css/interface-read-more.css">
     </head>
 
     <body>
+
+        <div class="lang-dropdown">
+            <i class="bx bx-globe"></i>
+            <div class="lang-dropdown-content">
+                <a href="#" onclick="changeLanguage('en')"><span class="fi fi-gb"></span> EN</a>
+                <a href="#" onclick="changeLanguage('fr')"><span class="fi fi-fr"></span> FR</a>
+                <a href="#" onclick="changeLanguage('jp')"><span class="fi fi-jp"></span> JP</a>
+                <a href="#" onclick="changeLanguage('tw')"><span class="fi fi-tw"></span> TW</a>
+            </div>
+        </div>
 
         <header class="header">
             
@@ -25,71 +36,47 @@
             <i class="bx bx-menu" id="menu-icon"></i>
 
             <nav class="navbar">
-                <a href="index.html#home">Accueil</a>
-                <a href="#about">Lire Plus</a>
-                <a href="index.html#education">Expériences</a>
-                <a href="index.html#projects">Projets</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html#home" data-i18n="home-header"></a>
+                <a href="#about" data-i18n="about-more-header"></a>
+                <a href="index.html#education" data-i18n="experiences-header"></a>
+                <a href="index.html#projects" data-i18n="projects-header"></a>
+                <a href="index.html#contact" data-i18n="contact-header"></a>
             </nav>
 
-            <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr">Me Contacter <i class="bx bxs-envelope-open"></i></a>
+            <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr" data-i18n="contact-me-header"></a>
 
         </header>
 
         <section class="about" id="about">
             <div class="about-content">
-                <h2>Plus à propos de <span>Moi</span></h2>
+                <h2 data-i18n="more-about-title"></h2>
 
                 <div class="more-content">
                     <div class="more-row">
-                        <h3><i class="bx bx-chevron-right"></i>Parcours</h3>
+                        <h3 data-i18n="parcours-title"></h3>
 
-                        <p>Lors de ma formation à l'IPSA, j'ai eu l'occasion de faire des
-                            bureaux d'études mettant notre capacité de réflexion à l'épreuve.
-                            Dans ces bureaux d'études on retrouve notamment de l'électrotechnique (contrôle d'un 
-                            moteur brushless par Arduino ou de création d'un robot suiveur de ligne). Un projet 
-                            d'automatique consistant à la création d'un drone sur Matlab (design de contrôle LQR). 
-                            Mais aussi la création d'un radar bidimensionnel en matlab (avec traitement du bruit).
-                            J'ai également travaillé sur des projets de sciences des données comme l'études d'algorithmes de prédiction de classe (avec KNN, 
-                            Théorème de Bayes, etc.). Ou encore de carte FPGA programmable avec vivado afin de 
-                            créer un compteur sur afficheur 7 segments. J'ai également pu travailler sur des réflexions de RSE ou de prospective.
+                        <p data-i18n="parcours-body">
                         </p>
                     </div>
 
                     <div class="more-row">
-                        <h3><i class="bx bx-chevron-right"></i>Compétences Techniques</h3>
+                        <h3 data-i18n="technical-skills-title"></h3>
 
-                        <p>Dans ma formation, j'ai pu utiliser principalement python ainsi que ses
-                            librairies utiles comme numpy, pandas, scikit, matplotlib ou encore PySide6.
-                            J'ai également une capacité intermédiaire en C/C++ ainsi qu'en matlab et simulink.
-                            Pour les systèmes embarquées, j'ai pu utiliser arduino et vivado pour des 
-                            cartes de FPGA. J'ai également utilisé CATIA pour certains projets de modélisations.
+                        <p data-i18n="technical-skills-body">
                         </p>
                     </div>
 
                     <div class="more-row">
-                        <h3><i class="bx bx-chevron-right"></i>Centres d'intérêts</h3>
+                        <h3 data-i18n="interests-title"></h3>
 
-                        <p>Les sports qui me passionnent sont le ski et l'escalade. J'aime particulièrement le ski dans les 
-                            pyrénées et j'ai déjà gagné des compétitions de courses (Slalom) en club. 
-                            Je pratique l'escalade en salle sur Toulouse à un niveau débutant. 
-                            Véritable passionné de jeux-vidéos allant du simulateur a l'arcade, j'essaie
-                            tous type de jeu qui me permettent de renforcer ma logique notamment grâce
-                            à des simulateurs comme Kerbal Space Program. J'admire également la différence
-                            de culture avec les pays asiatiques comme Taiwan ou le Japon. 
-                            C'est pourquoi j'adore voyager pour découvrir la façon dont les sociétés 
-                            fonctionnent dans le monde.
+                        <p data-i18n="interests-body">
                         </p>
                     </div>
 
                     <div class="more-row">
-                        <h3><i class="bx bx-chevron-right"></i>Soft-Skills</h3>
+                        <h3 data-i18n="soft-skills-title"></h3>
 
-                        <p>Je suis quelqu'un de rigoureux qui étudie l'ensemble des options
-                            a ma disposition avant de prendre une décision. Je m'adapte selon la charge de 
-                            travail sans problème. J'ai de l'expérince en travail d'équipes et gestion grâce a ma formation
-                            (planning de GANTT, PERT, etc.). J'ai également pu développer mes concepts de Soft skills
-                            grâce à mes cours développant les types de managment et de profil au sein d'une équipe.
+                        <p data-i18n="soft-skills-body">
                         </p>
                     </div>
                 </div>
@@ -100,7 +87,7 @@
                 <div class="toeic">
                     <img src="images/TOEIC_logo.jpg" alt="TOEIC_logo">
 
-                    <p>Score <em>TOEIC®</em> 975/990 <br> <i class="bx bxs-right-arrow-alt"></i> équivalent <span>C1</span></p>
+                    <p data-i18n="TOEIC-score"></p>
                 </div>
                 </a>
 
@@ -110,7 +97,7 @@
 
         <section class="posts-section" id="posts-section">
 
-            <h2 id="title-post">Quelques posts <span>intéressants</span></h2>
+            <h2 id="title-post" data-i18n="posts-title"></h2>
 
                 <div class="posts">
                     <div class="post-card">
@@ -142,35 +129,38 @@
 
             <ul class="list">
                 <li>
-                    <a href="index.html#home">Accueil</a>
+                    <a href="index.html#home" data-i18n="home-header"></a>
                 </li>
 
                 <li>
-                    <a href="index.html#about">À propos</a>
+                    <a href="index.html#about" data-i18n="about-header"></a>
                 </li>
 
                 <li>
-                    <a href="#about">Lire Plus</a>
+                    <a href="#about" data-i18n="about-more-header"></a>
                 </li>
 
                 <li>
-                    <a href="index.html#education">Expériences</a>
+                    <a href="index.html#education" data-i18n="experiences-header"></a>
                 </li>
 
                 <li>
-                    <a href="index.html#projects">Projets</a>
+                    <a href="index.html#projects" data-i18n="projects-header"></a>
                 </li>
 
                 <li>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html#contact" data-i18n="contact-header"></a>
                 </li>
             </ul>
 
             <p class="copyright">
                 © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes
             </p>
+
+            <p class="traduction-warning" data-i18n="traduction-warning"></p>
         </footer>
 
         <script type="module" src="src/js/script-read-more.js"></script>
+        <script type="module" src="src/js/script-language-selection.js"></script>
     </body>
 </html>

@@ -7,6 +7,91 @@
     height: 100%;
 }
 
+.lang-dropdown {
+    position: fixed;
+    display: inline-block;
+    left: -7%;
+    top: 18%;
+    z-index: 10;
+    cursor: default;
+    color: var(--text-color);
+    background: var(--bg-hover);
+    padding-left: 15rem;
+    padding-block: 2rem;
+    padding-right: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0 5px var(--accent-purple),
+                0 0 10px var(--accent-purple);
+    transition: 0.8s ease;
+}
+.lang-dropdown i {
+    font-size: 3rem;
+}
+.lang-dropdown a {
+    font-size: 2rem;
+}
+
+.lang-dropdown-content {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(45, 31, 94, 0.8);
+    min-width: 80px;
+    box-shadow: 0 0 5px var(--accent-purple),
+                0 0 15px var(--accent-purple);
+    clip-path: inset(0 -30px -30px -30px);
+    top: 7rem;
+    right: 2rem;
+    gap: 1rem;
+    padding: 1rem;
+    transition: 0.5s ease;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.lang-dropdown span {
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    color: initial;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+}
+
+.lang-dropdown:hover {
+    box-shadow: 0 0 10px var(--accent-purple),
+                0 0 15px var(--accent-purple),
+                0 0 20px var(--accent-purple);
+    transform: translateX(5rem);
+}
+
+.lang-dropdown:hover .lang-dropdown-content {
+    opacity: 1;
+    gap: 2rem;
+    padding: 2rem;
+    top: 7rem;
+    right: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.lang-dropdown a {
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.lang-dropdown a:hover {
+    border-bottom: 3px solid var(--accent-purple);
+}
+
+
 .about {
     min-height: 100vh;
     padding: 10rem 12%;
@@ -135,14 +220,22 @@
 
 
 
-@media(max-width:1350px) {
+@media(max-width:1380px) {
     .posts {
         gap: 2rem;
     }
 
+    .lang-dropdown {
+        left: -10%;
+    }
+
 }
 
-@media(max-width:1080px) {
+@media(max-width:1120px) {
+
+    .lang-dropdown {
+        left: -9%;
+    }
 
     .more-content {
         justify-content: center;
@@ -175,4 +268,11 @@
     .post-card iframe {
         max-height: 80rem;
     }
+}
+
+
+@media(max-width:600px) {
+.lang-dropdown {
+    left: -22%;
+}
 }

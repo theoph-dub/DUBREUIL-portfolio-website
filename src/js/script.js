@@ -12,7 +12,9 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active')
 };
 
-const wordsFrench = ["Étudiant ingénieur", "Développeur en herbe", "Fan de jeux-vidéo", "Passionné de ski"];
+const wordsFrench = ["Étudiant ingénieur", "Développeur en herbe", "Passioné de jeux-vidéo", "Adepte du ski"];
+const wordsEnglish = ["Engineering Student", "Budding developer", "Video-games enjoyer", "Ski enthusiast"]
+
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -118,14 +120,24 @@ camera.lookAt(0, 0, 0);
 
 
 // Lumière 
-const spotLight = new THREE.SpotLight(0xffffff, 13000, 0, Math.PI/12, 1, 2);
+const spotLight = new THREE.SpotLight(0xffffff, 4000, 0, Math.PI/12, 1, 2);
 spotLight.position.set(40, 30, 10);
 spotLight.castShadow = true;
 spotLight.shadow.bias = -0.00002;
 scene.add(spotLight);   
 
+
+
 // Modèle 
 let meshVenator;
+
+let cone1;
+let cone2;
+let cone3;
+let cone4;
+let engineLight;
+let engineGroup = new THREE.Group();
+
 const loaderVenator = new GLTFLoader().setPath(import.meta.env.BASE_URL + 'models/venator-class-star-destroyer_light/');
 loaderVenator.load('scene.gltf', 
     function(gltf) {
@@ -139,8 +151,57 @@ loaderVenator.load('scene.gltf',
         });
         
         meshVenator.scale.set(0.017, 0.017, 0.017);
-
+    
         scene.add(meshVenator);
+
+
+
+
+        // Moteurs
+
+        const geometryCone1 = new THREE.CylinderGeometry( 1, 15, 350, 64 );
+        const geometryCone2 = new THREE.CylinderGeometry( 1, 15, 350, 64 );
+        const geometryCone3 = new THREE.CylinderGeometry( 1, 15, 350, 64 );
+        const geometryCone4 = new THREE.CylinderGeometry( 1, 15, 350, 64 );
+        const materialCone = new THREE.MeshBasicMaterial( {
+            color: 0x0066ff,
+            transparent: true,
+            opacity: 0.4,
+            blending: THREE.AdditiveBlending,
+            side: THREE.DoubleSide
+        } );
+        cone1 = new THREE.Mesh(geometryCone1, materialCone );
+        cone2 = new THREE.Mesh(geometryCone2, materialCone );
+        cone3 = new THREE.Mesh(geometryCone3, materialCone );
+        cone4 = new THREE.Mesh(geometryCone4, materialCone );
+
+        engineLight = new THREE.PointLight(0x0066ff, 100, 200);
+
+
+        engineGroup.add(cone1);
+        engineGroup.add(cone2);
+        engineGroup.add(cone3);
+        engineGroup.add(cone4);
+        engineGroup.add(engineLight);
+
+        cone1.position.set(-654, 50, -46);  
+        cone1.rotation.z = Math.PI*1/2;
+
+        cone2.position.set(-654, 50, 50);  
+        cone2.rotation.z = Math.PI*1/2;
+
+
+        cone3.position.set(-580, 50, -94);  
+        cone3.rotation.z = Math.PI*1/2;
+
+        cone4.position.set(-580, 50, 96);  
+        cone4.rotation.z = Math.PI*1/2;
+        
+        meshVenator.add(engineGroup)
+
+        // Engine light
+
+        engineLight.position.set(-650, 50, -46);
 
         funcLoader();
     }
@@ -149,12 +210,15 @@ loaderVenator.load('scene.gltf',
 
 
 
+
+
 // ANIMATION SCROLL
 
 let scrollPosY = 0;
 let scrollY = 0;
+
 const about = document.getElementById("about");
-const aboutMid = document.querySelector('.ship-canvas').getBoundingClientRect().bottom - (document.querySelector('.ship-canvas').getBoundingClientRect().bottom-document.querySelector('.ship-canvas').getBoundingClientRect().top)/2;
+const aboutTop = about.offsetTop
 
 const startPosition = {x: -2, y: -1.6, z: -1};
 const startRotation = {x: Math.PI/12, y: -Math.PI/5, z: -Math.PI/45};
@@ -164,12 +228,29 @@ const secondStartRotation = {x: 0, y: Math.PI/2, z: Math.PI/2};
 
 
 const education = document.getElementById("education");
-const educationTop = education.offsetTop;
+const educationTop = education.offsetTop - 250;
+
+
+// Apparition des moteurs 
+
+let engineOpacity = 0;
+function updateEngines(targetOpacity) {
+
+    engineOpacity += (targetOpacity - engineOpacity) * 0.05;
+
+    cone1.material.opacity = engineOpacity;
+    cone2.material.opacity = engineOpacity;
+    cone3.material.opacity = engineOpacity;
+    cone4.material.opacity = engineOpacity;
+
+    engineLight.intensity = engineOpacity * 800;
+
+}
+
 
 
 
 // Animation
-const shipCanvas = document.getElementById('canvas-ship');
 let endPosition = null;
 let endRotation = null;
 let wasBottom = false;
@@ -180,22 +261,25 @@ function animate() {
     scrollY = window.scrollY;
     scrollPosY = (window.scrollY/document.body.clientHeight);
 
-    if (meshVenator && scrollY<=aboutMid) {
-        shipCanvas.style.position = 'fixed';
+    if (meshVenator && scrollY<=aboutTop) {
+
+        updateEngines(0)
 
 
-        meshVenator.position.x = startPosition.x - scrollPosY * -10;
+        meshVenator.position.x = startPosition.x - scrollPosY * -11;
         meshVenator.position.y = startPosition.y - scrollPosY * -8; 
         meshVenator.position.z = startPosition.z - scrollPosY * 0;  
 
-        meshVenator.rotation.x = startRotation.x + scrollPosY * Math.PI*2.3;
-        meshVenator.rotation.y = startRotation.y + scrollPosY * Math.PI*1.4; 
-        meshVenator.rotation.z = startRotation.z + scrollPosY * 0;
+        meshVenator.rotation.x = startRotation.x + scrollPosY * Math.PI*2.5;
+        meshVenator.rotation.y = startRotation.y + scrollPosY * Math.PI*1.35; 
+        meshVenator.rotation.z = startRotation.z + scrollPosY * Math.PI*0;
 
         endPosition = {x: meshVenator.position.x, y: meshVenator.position.y, z: meshVenator.position.z};
         endRotation = {x: meshVenator.rotation.x, y: meshVenator.rotation.y, z: meshVenator.rotation.z};
     }
-    if (scrollY>aboutMid) {
+    if (scrollY>aboutTop) {
+
+        updateEngines(0.8)
 
         if (wasBottom) {
 
@@ -205,21 +289,21 @@ function animate() {
 
             wasBottom = false;
         } else {
-            const delta = scrollY - aboutMid;
+            const delta = scrollY - aboutTop;
 
             meshVenator.position.y = endPosition.y -  delta * - 0.0111;  
-            meshVenator.position.x = endPosition.x - delta * -0.05
+            meshVenator.position.x = endPosition.x - delta * -0.03
         }
         
     }
 
     if (scrollY>educationTop) {
-        
+
         wasBottom = true;
         const delta = scrollY - educationTop;
 
         meshVenator.position.x = secondStartPosition.x;
-        meshVenator.position.y = secondStartPosition.y - delta*-0.03; 
+        meshVenator.position.y = secondStartPosition.y - delta*-0.025; 
         meshVenator.position.z = secondStartPosition.z;  
 
         meshVenator.rotation.x = secondStartRotation.x;
@@ -264,7 +348,14 @@ function funcLoader() {
 
             setTimeout(() => loaderHTML.remove(), 1500);
             
-            typeEffect(wordsFrench);
+            const lang = localStorage.getItem('language') || 'en';
+            if (lang=='fr') {
+                typeEffect(wordsFrench);
+            }
+            if (lang=='en') {
+                typeEffect(wordsEnglish);
+            }
+            
         }, 300);
     }
 }

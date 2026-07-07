@@ -1,0 +1,82 @@
+{
+    "home-header": "Home",
+    "about-header": "About me",
+    "about-more-header": "Read more",
+    "experiences-header": "Experiences",
+    "projects-header": "Projects",
+    "contact-header": "Contact",
+    "contact-me-header": "Contact Me <i class='bx bxs-envelope-open'></i>",
+
+    "more-about-title": "More about <span>Me</span>",
+
+    "parcours-title": "<i class='bx bx-chevron-right'></i>Academic career",
+    "parcours-body": "During my studies at IPSA, I had the opportunity to work on design projects that put our problem-solving skills to the test. These projects included, in particular, electrical engineering (controlling a brushless motor with Arduino or building a line-following robot). A Control Theory project involved designing a drone using MATLAB (LQR control design). I also developed a two-dimensional radar system in MATLAB (including noise processing). I also worked on data science projects, such as studying class prediction algorithms (using KNN, Bayes theorem, etc.). I also worked on a programmable FPGA board using Vivado to create a counter on a 7-segment display. I was also able to work on CSR (study on Nestlé) and foresight/futures-thinking initiatives (study on the 'Red Team Défense' in the French Army).",
+
+    "technical-skills-title": "<i class='bx bx-chevron-right'></i>Technical Skills",
+    "technical-skills-body": "During my studies, I primarily used Python and its useful libraries, such as NumPy, Pandas, Scikit, Matplotlib, and PySide6. I also have intermediate-level proficiency in C/C++, as well as in MATLAB and Simulink. For embedded systems, I have used Arduino and Vivado for FPGA boards. I have also used CATIA for certain modeling projects.",
+
+    "interests-title": "<i class='bx bx-chevron-right'></i>Interests",
+    "interests-body": "The sports I'm passionate about are skiing and rock climbing. I especially enjoy skiing in the Pyrenees, and I've already won some club-level slalom races. I climb at an indoor gym in Toulouse at a beginner level. As a true video game enthusiast—from simulators to arcade games—I try all kinds of games that help me sharpen my logical thinking, especially through simulators like Kerbal Space Program. I'm also fascinated by the cultural differences in Asian countries like Taiwan or Japan. That's why I love traveling to discover how societies around the world function.",
+
+    "soft-skills-title": "<i class='bx bx-chevron-right'></i>Soft-Skills",
+    "soft-skills-body": "I am a thorough person who carefully considers all available options before making a decision. I adapt easily to varying workloads. I have experience in teamwork and management thanks to my training (GANTT charts, PERT, etc.). I have also been able to develop my soft skills through courses that explore different management styles and team dynamics.",
+
+    "TOEIC-score": "<em>TOEIC®</em> score 975/990 <br> <i class='bx bxs-right-arrow-alt'></i> <span>C1</span> equivalent",
+
+    "posts-title": "Interesting <span>posts</span>",
+
+
+
+    "home-title": "Hello, I'm <span>Theophile</span>",
+    "home-text-body": "I am currently an engineering student at IPSA, an engineering school specializing in aerospace systems. My areas of interest include embedded systems, telecommunications, and software development applied to engineering.",
+    "contact-btn": "Contact",
+    "CV-btn": "My CV",
+
+    "about-title": "About <span>Me</span>",
+    "about-body": "I'm passionate about modern technology, and I explore projects related to programming and embedded electronics. I enjoy turning ideas into tangible systems, and I'm always ready to push myself to overcome challenges.",
+
+
+
+    "education-title": "Education & Experiences",
+
+    "IPSA-title": "Currently Enrolled - Engineering degree in Aerospace systems Engineering (IPSA)",
+    "IPSA-body": "Currently in my first year of the engineering program, majoring in embedded systems and telecommunications. Class of 2028. Member and mentor in the peer tutoring program.",
+
+    "INGC-title": "Internship - Civil Engineer, Design Tool Development (INGC)",
+    "INGC-body": "Development of a Python/PySide6 tool for the preliminary design of Warren truss bridges and footbridges, incorporating Eurocode-compliant checks. This includes the calculation of deflection, normal stresses, and modal analysis to assist engineers in the preliminary design of structures.",
+
+    "airsupport-mro-title": "Internship - Aircraft Maintenance Technician (AIR SUPPORT)",
+    "airsupport-mro-body": "Disassembly, cleaning, and reassembly of variable bleed valves in the VBV system of the CFM56 engine. Quality control and completion of inspection reports.",
+
+    "bac-title": "Le Garros Comprehensive High School",
+    "bac-body": "Earned a general high school diploma with highest honors, majoring in Mathematics, Physics and Chemistry, and English - Contemporary World Affairs.",
+
+    "projects-title": "Projects",
+
+    "warren-truss-project-title": "Warren truss",
+    "warren-truss-project-body": "A Python-based bridge/footbridge preliminary design tool. It features a graphical user interface built with PySide6 that allows users to enter data and then verify feasibility based on European standards.",
+
+    "step-up-project-title": "Step-Up",
+    "step-up-project-body": "Generation of electrical energy from deformation energy in a shoe insole using ceramic piezoelectric sensors. Simulation in Simulink.",
+
+    "this-site-project-title": "This website !",
+    "this-site-project-body": "Introduction to HTML/JS and styling techniques using CSS. Implementation of interactive buttons, hyperlinks, forms to fill out, etc.",
+
+    "tag-internship": "internship",
+    "tag-school": "School (IPSA)",
+    "tag-personal": "Personal",
+
+    "project-btn": "See project",
+
+    "contact-me-title": "Contact <span>Me</span>",
+
+    "form-name": "Full name",
+    "form-email": "Email",
+    "form-phone": "Phone number",
+    "form-subject": "Message subject",
+    "form-message": "Your message",
+    "form-button": "Send your message",
+
+    "loading-text": "Loading website",
+    "traduction-warning": "<i class='bx bx-error-circle'></i> Note: translations may contain errors (please contact me)"
+}

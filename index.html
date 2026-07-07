@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,20 @@
 
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
         <link rel="stylesheet" href="src/css/interface.css">
     </head>
     <body>
+        
+        <div class="lang-dropdown">
+            <i class="bx bx-globe"></i>
+            <div class="lang-dropdown-content">
+                <a href="#" onclick="changeLanguage('en')"><span class="fi fi-gb"></span> EN</a>
+                <a href="#" onclick="changeLanguage('fr')"><span class="fi fi-fr"></span> FR</a>
+                <a href="#" onclick="changeLanguage('jp')"><span class="fi fi-jp"></span> JP</a>
+                <a href="#" onclick="changeLanguage('tw')"><span class="fi fi-tw"></span> TW</a>
+            </div>
+        </div>
 
         <header class="header">
             
@@ -27,35 +38,30 @@
             <i class="bx bx-menu" id="menu-icon"></i>
 
             <nav class="navbar">
-                <a href="#home">Accueil</a>
-                <a href="#about">À propos</a>
-                <a href="#education">Expériences</a>
-                <a href="#projects">Projets</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-i18n="home-header"></a>
+                <a href="#about" data-i18n="about-header"></a>
+                <a href="#education" data-i18n="experiences-header"></a>
+                <a href="#projects" data-i18n="projects-header"></a>
+                <a href="#contact" data-i18n="contact-header"></a>
             </nav>
 
-            <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr">Me Contacter <i class="bx bxs-envelope-open"></i></a>
+            <a class="gradient-btn" href="mailto:theophile.dubreuil@ipsa.fr" data-i18n="contact-me-header"></a>
 
         </header>
 
-        <div class="ship-canvas-education">
         <div class="ship-canvas">
         <section class="home" id="home">
 
             <div class="home-content">
 
-                <h1>
-                    Bonjour, je suis <span>Théophile</span>
+                <h1 data-i18n="home-title">
                 </h1>
 
                 <div class="text-animation">
                     <i class="bx bx-chevron-right"></i><span class="typing"></span>
                 </div>
 
-                <p>
-                    Je suis actuellement un étudiant en cycle ingénieur à l'IPSA, une école d'ingénieur spécialisé
-                    dans les systèmes aéronautiques et spatials. Les domaines qui me passionnent sont notamment les systèmes embarquées,
-                    la télécommunication et le développement logiciel appliqué à l'ingénierie. 
+                <p data-i18n="home-text-body">
                 </p>
 
                     <div class="social-icons">
@@ -70,8 +76,8 @@
                     </div>
 
                 <div class="btn-group"> 
-                    <a href="files/DUBREUIL_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn">Mon CV</a>
-                    <a href="#contact" class="btn">Contact</a>
+                    <a href="files/DUBREUIL_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="CV-btn"></a>
+                    <a href="#contact" class="btn" data-i18n="contact-btn"></a>
                 </div>
 
             </div>
@@ -90,13 +96,13 @@
             </div>
 
             <div class="about-content">
-                <h2>À propos de <span>Moi</span></h2>
-                <p>
-                    Passionné par les technologies modernes, j'explore des projets autour de la programmation
-                    et de l'électronique embarquée. J'aime transformer les idées en systèmes concrets
-                    et je suis toujours prêt à me mettre en difficulté pour surmonter des défis.
+
+                <h2 data-i18n="about-title"></h2>
+
+                <p data-i18n="about-body">
                 </p>
-                <a href="index-read-more.html#home" class="btn">Lire plus</a>
+
+                <a href="index-read-more.html#home" class="btn" data-i18n="about-more-header"></a>
 
                 <div class="skills">
                     <div class="skill-pannel">
@@ -130,7 +136,7 @@
         </div>
 
         <section class="education" id="education">
-            <h2 class="heading">Éducation & Expérience</h2>
+            <h2 class="heading" data-i18n="education-title"></h2>
 
             <div class="timeline-items">
 
@@ -141,9 +147,8 @@
                                 2028
                         </div>
                         <div class="timeline-content">
-                            <h3>En cours - Diplôme d'ingénieur systèmes aéronautiques et spatials (IPSA)</h3>
-                            <p>Actuellement en 1ère année de cycle ingénieur, majeure systèmes embarquées et 
-                                télécommunications. Promo 2028. Membre et Tuteur du programme de tutorat.</p>
+                            <h3 data-i18n="IPSA-title"></h3>
+                            <p data-i18n="IPSA-body"></p>
                         </div>
                     </a>
                 </div>
@@ -155,11 +160,8 @@
                                 2026
                         </div>
                         <div class="timeline-content">
-                            <h3>Stage - Ingénieur génie civil, développement d'outil de dimensionnement (INGC)</h3>
-                            <p>Développement d'un outil de pré-dimensionnement en Python/PySide6 de 
-                                pont/passerelles en treillis Warren intégrant les vérifications selon l'Eurocode.
-                                Notamment le calcul de flèche, des contraintes normales et de l'analyse modale 
-                                afin d'assister les ingénieurs lors du pré-dimensionnement de structure.</p>
+                            <h3 data-i18n="INGC-title"></h3>
+                            <p data-i18n="INGC-body"></p>
                         </div>
                     </a>
                 </div>
@@ -171,9 +173,8 @@
                             2025
                         </div>
                         <div class="timeline-content">
-                            <h3>Stage - Technicien de maintenance aéronautique (AIR SUPPORT)</h3>
-                            <p>Démontage, nettoyage et remontage de vannes de décharges variables du système VBV 
-                                de moteur CF56. Contrôle qualité, remplissage de procès verbaux.</p>
+                            <h3 data-i18n="airsupport-mro-title"></h3>
+                            <p data-i18n="airsupport-mro-body"></p>
                         </div>
                     </a>
                 </div>
@@ -185,65 +186,58 @@
                             2023
                         </div>
                         <div class="timeline-content">
-                            <h3>Lycée polyvalent le garros</h3>
-                            <p>Obtention du baccalauréat général mention Très bien avec les enseignements 
-                                de spécialité Mathématique, Physique-Chimie et Anglais Monde contemporain.</p>
+                            <h3 data-i18n="bac-title"></h3>
+                            <p data-i18n="bac-body"></p>
                         </div>
                     </a>
                 </div>
 
             </div>
         </section>
-        </div>
         
         <section class="projects" id="projects">
 
-            <h2 class="heading">Projets</h2>
+            <h2 class="heading" data-i18n="projects-title"></h2>
 
             <div class="projects-box">
 
                 <div class="project-card">
                     <img src="images/App_warren.png" alt="">
 
-                    <h3>Treillis Warren</h3>
+                    <h3 data-i18n="warren-truss-project-title"></h3>
 
-                    <p>Outil de prédimensionnement de pont/passerelle en Python. Interface graphique
-                        avec PySide6 permettant d'entrer les données puis vérifier la faisabilité
-                        d'après les normes européennes.
+                    <p data-i18n="warren-truss-project-body">
                     </p>
 
-                    <div class="btn"><a href="https://github.com/theoph-dub/Pont-Warren-Predimensionnement-et-Verification/tree/main" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+                    <div class="btn"><a href="https://github.com/theoph-dub/Pont-Warren-Predimensionnement-et-Verification/tree/main" target="_blank" rel="noopener noreferrer" data-i18n="project-btn"></a></div>
 
-                    <div class="tag" id="internship">Stage</div>
+                    <div class="tag" id="internship" data-i18n="tag-internship"></div>
                 </div>
 
                 <div class="project-card">
                     <img src="images/semelles.jpg" alt="">
 
-                    <h3>Step-Up</h3>
+                    <h3 data-i18n="step-up-project-title"></h3>
 
-                    <p>Génération d'énergie électrique depuis une énergie de déformation sur 
-                        une semelle à l'aide de capteur piézoéléctrique en céramique. 
-                        Simulation sur Simulink.                       
+                    <p data-i18n="step-up-project-body">                 
                     </p>
 
-                    <div class="btn"><a href="files/Step-Up.pdf" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+                    <div class="btn"><a href="files/Step-Up.pdf" target="_blank" rel="noopener noreferrer" data-i18n="project-btn"></a></div>
 
-                    <div class="tag" id="ipsa">École</div>
+                    <div class="tag" id="ipsa" data-i18n="tag-school"></div>
                 </div>
 
                 <div class="project-card">
                     <img src="images/site.jpg" alt="">
 
-                    <h3>Ce site !</h3>
+                    <h3 data-i18n="this-site-project-title"></h3>
 
-                    <p>Découverte de l'HTML/JS et des méthodes de mise en forme avec CSS. 
-                        Implémentation de boutons réactifs, hyperliens, formulaire à remplir, etc.
+                    <p data-i18n="this-site-project-body">
                     </p>
 
-                    <div class="btn"><a href="https://github.com/theoph-dub/DUBREUIL-portfolio-website" target="_blank" rel="noopener noreferrer">Voir projet</a></div>
+                    <div class="btn"><a href="https://github.com/theoph-dub/DUBREUIL-portfolio-website" target="_blank" rel="noopener noreferrer" data-i18n="project-btn"></a></div>
 
-                    <div class="tag" id="personal">Personnel</div>
+                    <div class="tag" id="personal" data-i18n="tag-personal"></div>
                 </div>
 
             </div>
@@ -251,27 +245,27 @@
 
         <section class="contact" id="contact">
 
-            <h2 class="heading">Contactez <span>Moi</span></h2>
+            <h2 class="heading" data-i18n="contact-me-title"></h2>
 
             <form action="https://formsubmit.co/5a04efd3f960b32cc4134507e5b6b5a3" method="POST">
 
                 <div class="input-group">
 
                     <div class="input-box">
-                        <input type="text" name="name" placeholder="Nom complet" required>
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="name" data-i18n-placeholder="form-name" placeholder="Nom complet" required>
+                        <input type="email" name="email" data-i18n-placeholder="form-email" placeholder="Email" required>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="phone" placeholder="Numéro de téléphone">
-                        <input type="text" name="subject" placeholder="Sujet du message">
+                        <input type="text" name="phone" data-i18n-placeholder="form-phone" placeholder="Numéro de téléphone">
+                        <input type="text" name="subject" data-i18n-placeholder="form-subject" placeholder="Sujet du message">
                     </div>
                 </div>
 
                 <div class="input-group-2">
 
-                    <textarea name="message" id="message" placeholder="Votre message" cols="30" rows="10" required></textarea>
+                    <textarea name="message" id="message" data-i18n-placeholder="form-message" placeholder="Votre message" cols="30" rows="10" required></textarea>
 
-                    <input type="submit" value="Envoyer votre message" class="btn">
+                    <input type="submit" data-i18n-value="form-button" value="Envoyer votre message" class="btn">
                 </div>
             </form>
         </section>
@@ -291,42 +285,50 @@
             <ul class="list">
                 
                 <li>
-                    <a href="#home">Accueil</a>
+                    <a href="#home" data-i18n="home-header"></a>
                 </li>
 
                 <li>
-                    <a href="#about">À propos</a>
+                    <a href="#about" data-i18n="about-header"></a>
                 </li>
 
                 <li>
-                    <a href="index-read-more.html#about">Lire Plus</a>
+                    <a href="index-read-more.html#about" data-i18n="about-more-header"></a>
                 </li>
 
                 <li>
-                    <a href="#education">Expériences</a>
+                    <a href="#education" data-i18n="experiences-header"></a>
                 </li>
 
                 <li>
-                    <a href="#projects">Projets</a>
+                    <a href="#projects" data-i18n="projects-header"></a>
                 </li>
 
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" data-i18n="contact-header"></a>
                 </li>
             </ul>
 
             <p class="copyright">
-                © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes
+                © <span id="year"></span> - Théophile <span>Dubreuil</span> | MIT License, Learning purposes 
+            </p>
+
+            <p class="traduction-warning" data-i18n="traduction-warning">
+
             </p>
         </footer>
         
         <div id="loader">
             <div class="loader-spinner"></div>
-            <h2>Loading website<span class="typing-dots"></span></h2>
+            <div class="loader-text">
+                <h2 data-i18n="loading-text"></h2>
+                <span class='typing-dots'></span>
+            </div>
         </div>
 
 
         <script type="module" src="src/js/script.js"></script>
+        <script type="module" src="src/js/script-language-selection.js"></script>
     </body>
 
 </html>

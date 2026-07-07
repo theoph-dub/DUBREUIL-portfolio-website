@@ -1,0 +1,82 @@
+{
+    "home-header": "首頁",
+    "about-header": "關於我",
+    "about-more-header": "了解更多",
+    "experiences-header": "經歷",
+    "projects-header": "專案",
+    "contact-header": "聯絡方式",
+    "contact-me-header": "聯絡我 <i class='bx bxs-envelope-open'></i>",
+
+    "more-about-title": "更多關於<span>我</span>的介紹",
+
+    "parcours-title": "<i class='bx bx-chevron-right'></i>學經歷",
+    "parcours-body": "在IPSA就讀期間,我有機會參與多項考驗解決問題能力的設計專案。這些專案特別包含電機工程領域(使用Arduino控制無刷馬達,以及打造循線機器人)。一項自動控制專案則是利用MATLAB設計無人機(LQR控制設計)。我也曾在MATLAB中開發二維雷達系統(包含雜訊處理)。此外,我也參與過資料科學專案,例如研究分類預測演算法(使用KNN、貝氏定理等)。我還曾使用Vivado操作可程式化FPGA開發板,在七段顯示器上製作計數器。同時,我也參與過企業社會責任(CSR)相關研究(以雀巢公司為對象)以及前瞻思維專案(研究法國軍方的「紅隊防禦」)。",
+
+    "technical-skills-title": "<i class='bx bx-chevron-right'></i>技術能力",
+    "technical-skills-body": "在學期間,我主要使用Python及其實用函式庫,如NumPy、Pandas、Scikit、Matplotlib及PySide6。我也具備中等程度的C/C++能力,以及MATLAB與Simulink的操作經驗。在嵌入式系統方面,我使用過Arduino,以及搭配Vivado的FPGA開發板。部分建模專案中,我也使用過CATIA。",
+
+    "interests-title": "<i class='bx bx-chevron-right'></i>興趣",
+    "interests-body": "我熱愛的運動是滑雪與攀岩。我特別喜歡在庇里牛斯山滑雪,並曾在俱樂部層級的障礙滑雪賽事中獲勝。我在土魯斯的室內攀岩館以初學者程度練習攀岩。身為電玩遊戲的忠實愛好者,從模擬器到街機遊戲我都嘗試,尤其喜歡像Kerbal Space Program這類能鍛鍊邏輯思考的模擬遊戲。我也對台灣、日本等亞洲國家的文化差異深感著迷,這正是我熱愛旅行、探索世界各地社會運作方式的原因。",
+
+    "soft-skills-title": "<i class='bx bx-chevron-right'></i>軟實力",
+    "soft-skills-body": "我是一個做決定前會仔細考慮所有可行方案的謹慎的人。我能輕鬆適應不同的工作量。透過我的訓練(甘特圖、PERT等),我累積了團隊合作與管理方面的經驗。我也透過探討不同管理風格與團隊動態的課程,進一步培養了軟實力。",
+
+    "TOEIC-score": "<em>TOEIC®</em> 成績 975/990 <br> <i class='bx bxs-right-arrow-alt'></i> 相當於<span>C1</span>等級",
+
+    "posts-title": "精選<span>文章</span>",
+
+
+
+    "home-title": "哈囉,我是<span>泰奧菲勒</span>",
+    "home-text-body": "我目前是IPSA的工程系學生,這是一所專攻航太系統的工程學院。我感興趣的領域包括嵌入式系統、電信,以及應用於工程領域的軟體開發。",
+    "contact-btn": "聯絡我",
+    "CV-btn": "我的履歷",
+
+    "about-title": "關於<span>我</span>",
+    "about-body": "我對現代科技充滿熱情,積極探索與程式設計及嵌入式電子相關的專案。我喜歡將想法轉化為具體的系統,並隨時準備好挑戰自我、克服困難。",
+
+
+
+    "education-title": "學歷與經歷",
+
+    "IPSA-title": "在學中 - 航太系統工程學位(IPSA)",
+    "IPSA-body": "目前就讀工程學程第一年,主修嵌入式系統與電信。2028年畢業班。擔任同儕輔導計畫的成員兼導師。",
+
+    "INGC-title": "實習 - 土木工程師,設計工具開發(INGC)",
+    "INGC-body": "開發一套Python/PySide6工具,用於華倫式桁架橋樑與人行橋的初步設計,並整合符合歐洲規範(Eurocode)的檢核功能。內容包括撓度、正應力及模態分析的計算,以協助工程師進行結構初步設計。",
+
+    "airsupport-mro-title": "實習 - 航空維修技術員(AIR SUPPORT)",
+    "airsupport-mro-body": "拆解、清潔並重新組裝CFM56引擎VBV系統中的可變放氣活門。負責品質控管與檢驗報告的填寫。",
+
+    "bac-title": "勒加羅綜合高中",
+    "bac-body": "以優異成績取得普通高中畢業會考文憑(法國Bac),主修數學、物理化學,以及英語(當代世界議題)。",
+
+    "projects-title": "專案",
+
+    "warren-truss-project-title": "華倫桁架",
+    "warren-truss-project-body": "一套以Python開發的橋樑/人行橋初步設計工具,採用PySide6打造的圖形化使用者介面,讓使用者輸入資料後,即可依歐洲標準驗證其可行性。",
+
+    "step-up-project-title": "Step-Up",
+    "step-up-project-body": "利用陶瓷壓電感測器,將鞋墊形變產生的能量轉換為電能,並以Simulink進行模擬。",
+
+    "this-site-project-title": "這個網站!",
+    "this-site-project-body": "HTML/JS入門,以及使用CSS的排版技巧。實作互動按鈕、超連結、可填寫的表單等功能。",
+
+    "tag-internship": "實習",
+    "tag-school": "學校(IPSA)",
+    "tag-personal": "個人",
+
+    "project-btn": "查看專案",
+
+    "contact-me-title": "聯絡<span>我</span>",
+
+    "form-name": "全名",
+    "form-email": "電子郵件",
+    "form-phone": "電話號碼",
+    "form-subject": "訊息主旨",
+    "form-message": "您的訊息",
+    "form-button": "送出訊息",
+
+    "loading-text": "網站載入中",
+    "traduction-warning": "<i class='bx bx-error-circle'></i> 注意:翻譯內容可能有誤(請與我聯繫)"
+}
