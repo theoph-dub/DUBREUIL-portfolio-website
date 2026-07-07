@@ -12,8 +12,10 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active')
 };
 
-const wordsFrench = ["Étudiant ingénieur", "Développeur en herbe", "Passioné de jeux-vidéo", "Adepte du ski"];
-const wordsEnglish = ["Engineering Student", "Budding developer", "Video-games enjoyer", "Ski enthusiast"]
+const wordsFrench = ["Étudiant ingénieur", "Développeur en herbe", "Passionné de jeux-vidéo", "Adepte du ski"];
+const wordsEnglish = ["Engineering Student", "Aspiring developer", "Video-games lover", "Ski enthusiast"];
+const wordsJapanese = ["工学系の学生", "駆け出しの開発者", "ゲーム好き", "スキー愛好家"];
+const wordsTaiwanese = ["工程系學生", "新手開發者", "電玩愛好者", "滑雪愛好者"];
 
 let wordIndex = 0;
 let charIndex = 0;
@@ -354,6 +356,12 @@ function funcLoader() {
             }
             if (lang=='en') {
                 typeEffect(wordsEnglish);
+            }
+            if (lang=='jp') {
+                typeEffect(wordsJapanese);
+            }
+            if (lang=='tw') {
+                typeEffect(wordsTaiwanese);
             }
             
         }, 300);
