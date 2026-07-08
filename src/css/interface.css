@@ -170,7 +170,6 @@ body {
     padding: 3rem 12%;
     background: rgba(45, 31, 94, 0.3);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
