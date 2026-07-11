@@ -186,7 +186,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     justify-content: center;
-    background: var(--second-bg-page);
 }
 
 .post-card {
@@ -212,13 +211,19 @@
 .posts-section {
     min-height: 100vh;
     padding: 10rem 12%;
+    background: var(--second-bg-page);
 }
 .posts-section h2 {
     font-size: 5rem;
     padding-bottom: 8rem;
 }
 
-
+@media (min-width: 1921px) {
+    .post-card iframe {
+        width: 100%;
+        max-height: 59rem;
+    }
+}
 
 @media(max-width:1380px) {
     .posts {
@@ -272,7 +277,7 @@
 
 
 @media(max-width:600px) {
-.lang-dropdown {
-    left: -22%;
-}
+    .lang-dropdown {
+        left: -22%;
+    }
 }

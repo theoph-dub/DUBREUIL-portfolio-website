@@ -74,7 +74,7 @@ html {
 }
 
 body {
-    background-color: var(--plain-first-bg-page);
+    background-color: black;
     color: var(--text-color);
 }
 
@@ -780,6 +780,34 @@ section {
 }
 
 
+@media (min-width: 1921px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        padding: 10rem 12%;
+    }
+
+    .home-img {
+        width: 50vw;
+    }
+
+    .lang-dropdown {
+        left: -5%;
+    }
+
+    .timeline-items {
+    max-width: 1800px;
+    }
+
+    .contact {
+        padding: 5rem 20%;
+    }
+}
+
+
 @media(max-width:1380px) {
     .header {
         position: fixed;
@@ -890,8 +918,8 @@ section {
 
     .home {
         flex-direction: column-reverse;
-        margin: 5rem 7%;
-        background-color: transparent;
+        padding: 5rem 7%;
+        background-color: var(--first-bg-page);
     }
     .home-content {
         align-items: center;

@@ -219,19 +219,23 @@ loaderVenator.load('scene.gltf',
 let scrollPosY = 0;
 let scrollY = 0;
 
-const about = document.getElementById("about");
-const aboutTop = about.offsetTop
+let about = document.getElementById("about");
+let aboutTop = about.offsetTop
 
-const startPosition = {x: -2, y: -1.6, z: -1};
-const startRotation = {x: Math.PI/12, y: -Math.PI/5, z: -Math.PI/45};
+let startPosition = {x: -2.5, y: -1.6, z: -1.5};
+let startRotation = {x: Math.PI/12, y: -Math.PI/5, z: -Math.PI/45};
 
-const secondStartPosition = {x: 0, y: -14, z: 0};
-const secondStartRotation = {x: 0, y: Math.PI/2, z: Math.PI/2};
+let secondStartPosition = {x: 0, y: -28, z: 0};
+let secondStartRotation = {x: 0, y: Math.PI/2, z: Math.PI/2};
 
 
-const education = document.getElementById("education");
-const educationTop = education.offsetTop - 250;
+let education = document.getElementById("education");
+let educationTop = education.offsetTop;
 
+let aboutMid = aboutTop + ((educationTop-aboutTop)/2)
+
+let projects = document.getElementById("projects");
+let projectsTop = projects.offsetTop;
 
 // Apparition des moteurs 
 
@@ -261,19 +265,21 @@ function animate() {
     requestAnimationFrame(animate);
 
     scrollY = window.scrollY;
-    scrollPosY = (window.scrollY/document.body.clientHeight);
+    scrollPosY = Math.min(window.scrollY / aboutTop, 1);
+
+    stars.position.y = scrollY * 0.005;
 
     if (meshVenator && scrollY<=aboutTop) {
 
         updateEngines(0)
 
 
-        meshVenator.position.x = startPosition.x - scrollPosY * -11;
-        meshVenator.position.y = startPosition.y - scrollPosY * -8; 
+        meshVenator.position.x = startPosition.x - scrollPosY * -2.4;
+        meshVenator.position.y = startPosition.y - scrollPosY * -1.4; 
         meshVenator.position.z = startPosition.z - scrollPosY * 0;  
 
-        meshVenator.rotation.x = startRotation.x + scrollPosY * Math.PI*2.5;
-        meshVenator.rotation.y = startRotation.y + scrollPosY * Math.PI*1.35; 
+        meshVenator.rotation.x = startRotation.x + scrollPosY * Math.PI*0.4;
+        meshVenator.rotation.y = startRotation.y + scrollPosY * Math.PI*0.205; 
         meshVenator.rotation.z = startRotation.z + scrollPosY * Math.PI*0;
 
         endPosition = {x: meshVenator.position.x, y: meshVenator.position.y, z: meshVenator.position.z};
@@ -291,29 +297,30 @@ function animate() {
 
             wasBottom = false;
         } else {
-            const delta = scrollY - aboutTop;
+            const sectionDistance = educationTop - aboutTop;
+            const progress = Math.min((scrollY - aboutTop) / sectionDistance, 1);
 
-            meshVenator.position.y = endPosition.y -  delta * - 0.0111;  
-            meshVenator.position.x = endPosition.x - delta * -0.03
+            meshVenator.position.y = endPosition.y -  progress * - 14;  
+            meshVenator.position.x = endPosition.x - progress * - 50;
         }
         
     }
 
-    if (scrollY>educationTop) {
+    if (scrollY>aboutMid) {
+
+        const sectionDistance = projectsTop - aboutTop;
+        const progress = Math.min((scrollY - aboutTop) / sectionDistance, 1);
 
         wasBottom = true;
-        const delta = scrollY - educationTop;
 
         meshVenator.position.x = secondStartPosition.x;
-        meshVenator.position.y = secondStartPosition.y - delta*-0.025; 
+        meshVenator.position.y = secondStartPosition.y - progress*- 50; 
         meshVenator.position.z = secondStartPosition.z;  
 
         meshVenator.rotation.x = secondStartRotation.x;
         meshVenator.rotation.y = secondStartRotation.y; 
         meshVenator.rotation.z = secondStartRotation.z;
     }
-
-    stars.position.y = scrollPosY * 5;
 
     rendererStars.render(sceneStars, cameraStars);
     renderer.render(scene, camera);
@@ -329,13 +336,23 @@ window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
     cameraStars.aspect = window.innerWidth / window.innerHeight;
     cameraStars.updateProjectionMatrix();
 
-    rendererStars.setSize(window.innerWidth, window.innerHeight, false);
+    rendererStars.setSize(window.innerWidth, window.innerHeight);
+    
+    about = document.getElementById("about");
+    aboutTop = about.offsetTop
 
+    education = document.getElementById("education");
+    educationTop = education.offsetTop;
+
+    aboutMid = aboutTop + ((educationTop-aboutTop)/2)
+
+    projects = document.getElementById("projects");
+    projectsTop = projects.offsetTop;
 });
 
 
